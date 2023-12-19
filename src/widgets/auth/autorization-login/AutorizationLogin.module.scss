@@ -1,0 +1,135 @@
+@use '../../../app/styles/common/var';
+
+.root {
+    width: 50%;
+    position: relative;
+
+    @media (max-width: 900px) {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @media (max-width: 700px) {
+      width: 100%;
+    }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 50px;
+    width: 440px;
+    width: 30vw;
+
+    @media (max-width: 1600px) {
+      padding: 44px;
+    }
+
+    @media (max-width: 1400px) {
+      width: 38vw;
+    }
+    @media (max-width: 1200px) {
+      width: 40vw;
+    }
+    @media (max-width: 900px) {
+      width: 100%;
+    }
+
+
+      .title {
+        font-size: 29px;
+        color: black;
+        font-weight: 800;
+        margin: 0;
+      }
+
+      .subTitle {
+        color: #777777;
+        font-size: 14px;
+        padding-top: 15px;
+        line-height: 22px;
+        max-width: 80%;
+      }
+      .linkRegistration {
+        color: #777777;
+        padding-top: 0px;
+        font-size: 14px;
+        line-height: 22px;
+      }
+      .buttonLink {
+        background-color: rgba(255, 255, 255, 0);
+        color: var.$color-main-logo;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        font-size: 15px;
+        &:hover {
+          text-decoration: underline;
+        }
+        padding-bottom: 130px;
+
+        @media (max-width: 1600px) {
+          padding-bottom: 50px;
+        }
+      }
+
+
+    .formContainer {
+      position: absolute;
+      bottom: 44px;
+      width: 80%;
+      
+
+      .inputsContainer {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 14px;
+        @media (max-width: 1600px) {
+          row-gap: 16px;
+        }
+
+     
+      }
+
+      .linkContainder {
+        .linkLabel {
+          font-size: 14px;
+          color: #777777;
+          cursor: pointer;
+          @media (max-width: 1600px) {
+            font-size: 12.25px;
+          }
+          @media (max-width: 440px) {
+            font-size: 16.25px;
+          }
+          &:hover {
+            color: var.$color-main-logo;
+          }
+        }
+      }
+    }
+
+
+
+  }
+}
+
+.footerRememberContainer {
+  padding-block: 24px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.errorContainer {
+  display: flex;
+  justify-content: center;
+  height: 32px;
+  .errorText {
+    // padding-top: 50px;
+    color: rgba(255, 0, 0, 0.733);
+    font-weight: 600;
+    text-align: center;
+  }
+}

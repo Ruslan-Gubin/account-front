@@ -1,0 +1,16 @@
+.root {
+  .formWrapper {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 30px;
+    @media (max-width: 1600px) {
+      row-gap: 26.25px;
+      min-height: 176px;
+    }
+
+    @media (max-width: 575px) {
+      row-gap: 13.25px;
+    }
+  }
+}

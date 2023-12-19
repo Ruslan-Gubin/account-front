@@ -1,0 +1,29 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-image: url(../../../bg-login.jpg);
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.formWrapper {
+  width: 61vw;
+  height: 80vh;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  @media (max-width: 1600px) {
+    height: 76vh;
+  }
+  @media (max-width: 1400px) {
+    width: 80vw;
+  }
+
+
+}

@@ -1,0 +1,13 @@
+@forward "common/libs";
+
+
+@font-face {
+  font-family: pragmatica;
+  src: url(../../../public/fonts/pragmatica/Pragmatica-Book.woff);
+}
+
+html {
+  font-family: pragmatica;
+  font-weight: 400;
+  color: #11142D;
+}

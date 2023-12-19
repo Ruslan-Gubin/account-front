@@ -1,0 +1,44 @@
+.calendar_panel__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.calendar-panel--item-date {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    color: #4cb4bc;
+  }
+}
+
+.calendar__panel_item__selected .calendar-panel--item-date {
+  background-color: #4cb4bc;
+  color: white;
+}
+
+.calendar_panel__item__not_current .calendar-panel--item-date {
+ color: #B9B9C3;
+}
+
+.calendar__panel_item__today {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #4cb4bc;
+  color: #4cb4bc;
+}
+
+.calendar_panel__item__not_in_range  {
+  cursor: not-allowed;
+}
+
+.calendar_panel__item__not_in_range .calendar-panel--item-date  {
+  color: #B9B9C3;
+}

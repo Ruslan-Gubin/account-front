@@ -1,0 +1,50 @@
+.root {
+  display: grid;
+  column-gap: 30px;
+  grid-template-columns: 1fr 2fr;
+  align-items: flex-start;
+
+
+
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 26.5px;
+    align-items: stretch;
+  }
+
+  .rightSide {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+   
+
+
+    .firstInfo {
+      display: grid;
+      column-gap: 30px;
+      grid-template-columns: 1fr 1fr;
+      padding-bottom: 20px;
+
+      @media (max-width: 530px) {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+      }
+    }
+  }
+}
+
+.buttonSettingFields {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonSetting {
+  width: 400px;
+  
+  @media (max-width: 1400px) {
+    width: 100%;
+  }
+}

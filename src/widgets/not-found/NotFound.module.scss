@@ -1,0 +1,67 @@
+@use "../../app/styles/common/var";
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    to left,
+    rgb(234, 234, 234),
+    rgb(244, 244, 244),
+    rgb(244, 244, 244),
+    rgb(233, 233, 233)
+  );
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.content {
+  text-align: center;
+}
+
+.notFoundTitle {
+  font-size: 200px;
+  font-weight: 600;
+  color: var.$color-main-logo;
+  margin: 0;
+  padding: 0;
+}
+
+.notFoundSubTitle {
+  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: var.$color-main-logo;
+  padding-block-end: 60px;
+}
+
+.notFoundText {
+  display: block;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.8);
+  max-width: 56%;
+  font-weight: 600;
+  line-height: 22px;
+  padding-block-end: 4px;
+}
+
+.linkText {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: black;
+  color: rgba(0, 0, 0, 0.8);
+}
+.linkGoHome {
+  color: #4ac49f;
+  letter-spacing: 0.5px;
+  padding-inline-start: 5px;
+  background-color: rgba(255, 255, 255, 0);
+  &:hover {
+    text-decoration: underline;
+  }
+}

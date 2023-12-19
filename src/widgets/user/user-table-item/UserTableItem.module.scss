@@ -1,0 +1,45 @@
+.companyListItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  padding: 20px 15px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.139);
+  align-items: center;
+  @media (max-width: 785px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &:hover {
+    background-color: #7777770b;
+    cursor: pointer;
+  }
+  @media (max-width: 1600px) {
+    padding: 17px 15px;
+  }
+
+  .companyListItemSpan {
+    color: #777777;
+    font-size: 16px;
+    overflow: hidden;
+    width: 80%;
+    text-overflow: ellipsis;
+    min-height: 18px;
+
+    @media (max-width: 1600px) {
+      font-size: 14px;
+    }
+    @media (max-width: 1400px) {
+      font-size: 12.25px;
+    }
+  }
+
+  .actionContainer {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    justify-content: flex-end;
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+}

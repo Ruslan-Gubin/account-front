@@ -1,0 +1,62 @@
+
+.root {
+  display: inline-flex;
+  justify-content: center; 
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  padding: 10px 0;
+  padding-right: 10px;
+
+  input {
+    display: none;
+  }
+
+  .checkbox {
+    cursor: pointer;
+    border: 1px solid #D7D7D7;
+    border-radius: 5px;
+    width: 17.5px;
+    height: 17.5px;
+    position: relative;
+    margin-right: 9px;
+  }
+  
+  .active {
+    border: 1px solid #4CBC9A;
+    position: relative;
+    background-color: #4CBC9A;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 3px;
+      width: 5px;
+      height: 2px;
+      background-color: white;
+      rotate: (45deg);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 8px;
+      height: 2px;
+      background-color: white;
+      rotate: (-45deg);
+    }
+  
+  }
+}
+
+.labelText {
+font-size: 14px;
+color: #777777;
+font-weight: 600;
+letter-spacing: 0.3px;
+}
+
+.colorOrange {
+  background-color: #FF6A59;
+}

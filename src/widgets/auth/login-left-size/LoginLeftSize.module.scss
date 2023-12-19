@@ -1,0 +1,20 @@
+.root {
+  width: 50%;
+  overflow: hidden;
+  position: relative;
+  background-color: rgb(243, 243, 243);
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background-image: url('../../../../public/login-side-bg.jpg');
+
+  @media (max-width: 900px) {
+    width: 0px;
+    display: none;
+  }
+  
+
+
+
+}

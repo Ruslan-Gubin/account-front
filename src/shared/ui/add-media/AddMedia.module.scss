@@ -1,0 +1,56 @@
+.root {
+  max-width: 230px;
+
+  min-height: 190px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 575px) {
+    margin-bottom: 10px;
+  }
+  @media (max-width: 535px) {
+    padding: 0 5px;
+  }
+  
+  .add_file {
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid var(--border, #eee);
+    background: #fcfcfc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .more_file {
+    width: 80px;
+    height: 80px;
+  }
+} 
+.smallSize {
+  width: 92px;
+  height: 118px;
+}
+
+.addMediaContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  padding-top: 12px;
+  cursor: pointer;
+}
+
+.addMediaText {
+  color: #666666;
+  font-weight: 600;
+  font-size: 13px;
+  font-style: normal;
+  line-height: 120%;
+}

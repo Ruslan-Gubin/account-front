@@ -1,0 +1,34 @@
+.root {
+  .tableHeaderList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    padding: 20px 15px;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.271);
+
+    @media (max-width: 785px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .tableHeaderListItem {
+      color: #374557;
+      font-weight: 600;
+      font-size: 18px;
+
+      @media (max-width: 1600px) {
+        font-size: 16px;
+      }
+      @media (max-width: 1400px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .companyList {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 850px) {
+      row-gap: 30px;
+    }
+  }
+}

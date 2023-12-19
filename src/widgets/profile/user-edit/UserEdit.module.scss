@@ -1,0 +1,38 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+
+  .firstWrapper {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 30px;
+    align-items: stretch;
+    justify-content: stretch;
+
+
+
+    @media (max-width: 1600px) {
+      gap: 35px;
+      padding-bottom: 15px;
+     }
+    @media (max-width: 1440px) {
+      grid-template-columns: 1fr 2fr;
+
+     }
+    @media (max-width: 1300px) {
+      display: flex;
+      flex-direction: column;
+     }
+   
+  }
+
+  .buttonContainer {
+    padding: 20px 0;
+    display: flex;
+    justify-content: flex-end;
+    .buttonChangeInfo {
+      max-width: 110px;
+    }
+  }
+}

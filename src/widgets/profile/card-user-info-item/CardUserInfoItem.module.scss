@@ -1,0 +1,76 @@
+.cardUserInfoItem {
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0.416),
+    rgba(237, 237, 237, 0.416),
+    rgba(160, 239, 167, 0.416) 165%
+  );
+  padding: 11px 17px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.036);
+  @media (max-width: 1300px) {
+    column-gap: 5px;
+    padding: 11px 5px;
+  }
+
+  @media (max-width: 1200px) {
+    margin: 0 auto;
+    column-gap: 20px;
+    padding: 11px 17px;
+    width: 100%;
+  }
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardUserInfoLabel {
+  font-size: 16px;
+  font-weight: 400;
+
+  color: #777777d5;
+  color: #374557;
+  font-weight: 600;
+
+  padding-bottom: 15px;
+  @media (max-width: 1400px) {
+    font-weight: 600;
+    font-size: 14px;
+    padding-bottom: 15px;
+  }
+}
+
+.cardUserEmail {
+  color: #5b5b5bd5;
+  font-size: 18px;
+  height: 24px;
+
+  @media (max-width: 1400px) {
+    font-size: 16px;
+  }
+  @media (max-width: 1300px) {
+    font-size: 15px;
+    max-width: 95%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 18px;
+    max-width: 100%;
+  }
+  @media (max-width: 410px) {
+    max-width: 85%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

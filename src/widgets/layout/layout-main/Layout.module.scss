@@ -1,0 +1,87 @@
+.root {
+  display: flex;
+  background-image: linear-gradient(
+    to left,
+    rgb(234, 234, 234),
+    rgb(244, 244, 244),
+    rgba(55, 131, 55, 0.099),
+    rgb(244, 244, 244),
+    rgb(233, 233, 233)
+  );
+
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 104px;
+    transition: all 0.4s ease;
+    width: 100%;
+    margin-right: 104px;
+    padding-bottom: 40px;
+
+    @media (max-width: 1600px) {
+      margin-left: 91px;
+    }
+
+    @media (max-width: 1040px) {
+      margin-left: 87.5px;
+    }
+    @media (max-width: 784px) {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    .content {
+      padding: 40px;
+      padding-bottom: 40px;
+      position: relative;
+      min-height: 90.6vh;
+
+      @media (max-width: 1600px) {
+        padding: 35px;
+      }
+      @media (max-width: 1200px) {
+        padding: 26.25px;
+      }
+      @media (max-width: 767px) {
+        padding: 17.5px;
+      }
+      @media (max-width: 575px) {
+        padding: 15px;
+      }
+    }
+  }
+  .open {
+    margin-left: 300px;
+
+    @media (max-width: 1600px) {
+      margin-left: 262px;
+    }
+    @media (max-width: 1200px) {
+      margin-left: 238px;
+    }
+
+    @media (max-width: 1040px) {
+      margin-left: 87.5px;
+    }
+    @media (max-width: 784px) {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+
+  .noRightSide {
+    margin-right: 0px;
+
+    @media (max-width: 1600px) {
+      margin-right: 0px;
+    }
+
+    @media (max-width: 1040px) {
+      margin-left: 87.5px;
+    }
+    @media (max-width: 784px) {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+}

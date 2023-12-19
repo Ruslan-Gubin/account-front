@@ -1,0 +1,58 @@
+.root {
+  height: 57px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+
+  @media (max-width: 1600px) {
+    padding-bottom: 26.25px;
+    height: 50px;
+  }
+  @media (max-width: 767px) {
+    padding-bottom: 13.5px;
+  }
+
+  .breadcrumb_list {
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    padding: 15px 16px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+
+    position: relative;
+
+    @media (max-width: 1600px) {
+      font-size: 15.75px;
+    }
+    @media (max-width: 576px) {
+      font-size: 11px;
+    }
+    .link {
+      font-weight: 600;
+      cursor: pointer;
+      color: #4CBC9A;
+
+      &::after {
+        font-size: 21px;
+        position: relative;
+        top: 2px;
+        content: " /";
+        color: #4CBC9A;
+        @media (max-width: 576px) {
+          font-size: 15px;
+        }
+      }
+      padding-right: 5px;
+    }
+    :nth-last-child(1) {
+      cursor: default;
+      font-weight: 400;
+      color: #828690;
+      &::after {
+        content: "";
+      }
+    }
+  }
+}

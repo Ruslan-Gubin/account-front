@@ -1,0 +1,95 @@
+.calendar_panel__header_arrow {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0);
+   z-index: 1;
+  cursor: pointer;
+}
+
+.calendar_panel__header_arrow::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.805);
+  border-radius: 5px;
+  top: 9px;
+  left: 3px;
+  transform: rotate(50deg);
+}
+.calendar_panel__header_arrow::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.781);
+  border-radius: 5px;
+  top: 9px;
+  left: 8px;
+  transform: rotate(-50deg);
+}
+
+
+.calendar_panel__header {
+  padding: 10px;
+   display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  
+}
+
+.calendar_panel__date {
+font-weight: 600;
+color: black;
+font-size: 14px;
+font-weight: 400;
+}
+
+.calendar_panel__month {
+  padding-right: 20px;
+}
+
+.calendar_panel__prev_mounth {
+  background-color: rgba(255, 255, 255, 0);
+  transform: rotate(90deg);
+}
+
+.calendar_panel__next_mounth {
+  background-color: rgba(255, 255, 255, 0);
+  transform: rotate(-90deg);
+}
+
+.calendar_panel__prev_year {
+  background-color: rgba(255, 255, 255, 0);
+  transform: rotate(90deg);
+  top: 0;
+  left: -10px;
+}
+
+.calendar_panel__prev_year :nth-last-child(2) {
+position: absolute;
+top: 6px;
+left: 0px;
+}
+
+.calendar_panel__next_year {
+  background-color: rgba(255, 255, 255, 0);
+  transform: rotate(-90deg);
+  top: 0;
+  left: -10px;
+}
+
+.calendar_panel__next_year :nth-last-child(2) {
+position: absolute;
+top: 6px;
+left: 0px;
+}
+
+.calendar_panel__buttons_left {
+  display: flex;
+}
+.calendar_panel__buttons_right {
+  display: flex;
+}
+

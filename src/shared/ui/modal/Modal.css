@@ -1,0 +1,44 @@
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.21);
+  z-index: 0;
+  scale: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.modal-container {
+  background-color: #ffff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.168);
+  scale: 0;
+  transition: all 0.3s ease;
+  overflow-y: scroll;
+}
+
+.modal-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+
+.modalrg-content::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-wrapper__active {
+  scale: 1;
+  z-index: 200;
+}
+
+.modal-container__active {
+  scale: 1;
+}
+
+

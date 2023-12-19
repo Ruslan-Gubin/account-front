@@ -1,0 +1,121 @@
+.dropdown {
+  position: relative;
+  display: block;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 400;
+  
+  @media (max-width:1600px) {
+    font-size: 14px;
+  }
+
+  .dropdownLabel {
+    display: block;
+    // padding-bottom: 8px;
+    align-items: center;
+    font-size: 13.8px;
+    color: #666666;
+    font-weight: 600;
+    @media (max-width:1600px) {
+      font-size: 11.5px;
+    }
+  }
+  
+  .dropdownLabelError {
+    flex-wrap: nowrap;
+  }
+  
+  .dropdown_selected {
+    box-shadow: 1px 1px 5px 1px #04040408;
+    padding: 7.5px 10px 7.5px 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #e0e0e0;
+    align-items: center;
+    height: 52px;
+    margin-top: 8px;
+
+    @media (max-width: 1600px) {
+      height: 46px;
+    }
+
+
+    cursor: pointer;
+    .value_container {
+      overflow: hidden;
+      white-space: nowrap; 
+      text-overflow: ellipsis; 
+      padding-left: 3px;
+      width: 90%;
+      height: 20px;
+    }
+    &__value {
+      display: block;
+      height: 17px;
+      color: #797979;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+
+  .dropdown_menu__container {
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 1px #04040413;
+    color: #797979;
+    z-index: 2;
+    top: 78px;
+    border: 1px solid #4cbc9a5f;
+  
+    @media (max-width: 1600px) {
+      top: 68px;
+    }
+    @media (max-width: 767px) {
+      top: 68px;
+    }
+
+
+
+    .dropdown_menu {
+      overflow: hidden;
+      margin-right: 0;
+  
+      &__li {
+        padding-left: 10px;
+        display: block;
+        transition: all 0.4s ease;
+        cursor: pointer;
+        width: 100%;
+        overflow: hidden;
+        padding: 10px 0;
+        padding-right: 0;
+        margin-right: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        border-radius: 5px;
+     
+      }
+      &__active {
+        background-color: #4cbc9a;
+        color: white;
+           color: white;
+      }
+      &__item {
+    
+        padding-left: 10px;
+      }
+    }
+  }
+  .dropdown_menu__up {
+    top: -155px;
+    
+    @media (max-width: 1600px) {
+      top: -145px;
+    }
+  }
+}
+

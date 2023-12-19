@@ -1,0 +1,116 @@
+%title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0px 7px;
+  height: 50px;
+  position: relative;
+  border: 1px solid #ff6a5900;
+
+  @media (max-width: 1600px) {
+    height: 44px;
+  }
+  @media (max-width: 1400px) {
+    height: 48px;
+  }
+  @media (max-width: 784px) {
+    height: 45px;
+  }
+  @media (max-width: 767px) {
+    height: 40px;
+  }
+
+}
+
+.titleItem {
+  @extend %title;
+
+
+  &:hover {
+    .iconText {
+      transition: all 0.4s ease;
+      color: #4CBC9A;  
+    }
+  }
+
+}
+
+
+.titleLeftContainer {
+  display: flex;
+  align-items: center;
+
+}
+
+.iconText {
+  font-size: 15px;
+  color: #737b8bdf; 
+  min-height: 18px;  
+  font-weight: 600;   
+  opacity: 0;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+  top: 2px;
+
+ 
+  &_active {
+    opacity: 1;
+  }
+}
+
+
+.navActive {
+  background-color: #4CBC9A;
+  &:hover {
+    .iconText {
+      transition: all 0.4s ease;
+      color: white;  
+    }
+  }
+  .iconText {
+    color: white;  
+  }
+}
+
+.iconMenu {
+  display: flex;
+  margin: 0 12px 0 10px;
+  transition: all 0.4s ease;
+  justify-content: center;
+
+}
+
+.navIconClose {
+  @media (max-width: 1600px) {
+   padding-left: 4px;
+  }
+  @media (max-width: 1400px) {
+    padding-left: 3px;
+    height: 42px;
+  }
+  @media (max-width: 1040px) {
+    padding-left: 0px;
+    height: 40px;
+  }
+
+  &:hover {
+    box-shadow: 1px 1px 5px 1px #00000013;
+  }
+  
+}
+
+.triangleContainer {
+  rotate: (90deg);
+  position: absolute;
+  right: 20px;
+  top: 17px;
+  @media (max-width: 767px) {
+    top: 12px;
+  }
+}
+
+
