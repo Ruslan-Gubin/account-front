@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Outlet } from "react-router";
 import { useSideIsOpen } from "../../../entities";
 import { authAdapter } from "../../../entities/auth/service";
+import { Loader } from "../../../shared";
 import { NotificationList } from "../../notification";
 import { SideBar } from "../layout-side-bar/SideBar";
 import { TopBar } from "../layout-top-bar/TopBar";
@@ -31,7 +32,7 @@ const Layout = () => {
 
   if (isConnectServer) {
     return (
-      <div>There is a connection with the server, please wait...</div>
+      <Loader />
       )
   }
 
