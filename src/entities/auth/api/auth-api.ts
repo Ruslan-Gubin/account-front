@@ -8,15 +8,40 @@ const authorization = async (payload: AuthorizationInput): Promise<Authorization
 }
 
 const registrationUser = (payload: RegistrationUserInput): Promise<RegistrationUserResponse> => {
+
+  const formData = new FormData()
+  formData.append('avatar', payload.avatar) 
+  formData.append('date_of_birth', payload.date_of_birth)
+  formData.append('email', payload.email)
+  formData.append('gender', payload.gender)
+  formData.append('name', payload.name)
+  formData.append('password', payload.password)
+
   const registrationUrl = 'register';
 
-  return FetchService.post({ url: registrationUrl, payload });
+  return FetchService.post({ url: registrationUrl, payload: formData });
 };
 
 const editUser = (payload: EditUserInput): Promise<RegistrationUserResponse> => {
+  
+  const formData = new FormData()
+  formData.append('id', payload.id) 
+
+  if (payload.name) {
+    formData.append('name', payload.name) 
+  }
+  if (payload.password) {
+    formData.append('password', payload.password) 
+  }
+
+  if (payload.prevImg && payload.newImg) {
+    formData.append('newImg', payload.newImg) 
+    formData.append('prevImg', payload.prevImg) 
+  }
+
   const editUrl = 'auth-update';
 
-  return FetchService.patch({ url: editUrl, payload });
+  return FetchService.patch({ url: editUrl, payload: formData });
 };
 
 const getAll = (payload: { id: string }): Promise<GetAllUsersResponse> => {

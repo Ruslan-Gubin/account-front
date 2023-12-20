@@ -3,23 +3,27 @@ import { getToken } from "./utils";
 
 interface ConfigFetchInit extends RequestInit {
   headers: {
-    'Content-Type': string
+    'Content-Type'?: string
     Authorization?: string;
   }
 }
 
 export function fethConfig(method: string ="GET", payload?: object): ConfigFetchInit {
+  const payloadIsFormData = payload instanceof FormData
 
   const config: ConfigFetchInit = {
     method: method,
     headers: {
-      'Content-Type': 'application/json',
        Authorization: `Bearer ${getToken()}`,
     }
   };
 
+  if (!payloadIsFormData) {
+    config.headers["Content-Type"] = 'application/json'
+  }
+
   if (payload) {
-    const currentPayload = payload instanceof FormData ? payload : JSON.stringify(payload);
+    const currentPayload = payloadIsFormData ? payload : JSON.stringify(payload);
     config.body = currentPayload;
   }
 

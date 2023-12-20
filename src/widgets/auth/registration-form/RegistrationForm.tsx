@@ -86,12 +86,12 @@ const RegistrationForm = ({ changeForm }: Props) => {
     }
 
     registration({
-      avatar: mediaPreview.fileList[0].result as string,
       password: values.password,
       name: values.name,
       date_of_birth: values.date_of_birth,
       email: values.email,
       gender: values.gender.value,
+      avatar: mediaPreview.fileList[0].file,
     });
   };
 

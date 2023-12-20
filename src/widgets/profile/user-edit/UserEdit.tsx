@@ -6,7 +6,7 @@ import {
   useNotificationSelect,
 } from "../../../entities";
 import { EditUserInput } from "../../../entities/auth/DTO/auth-dto";
-import { SkillButton } from "../../../shared";
+import { CONFIG_APP, SkillButton } from "../../../shared";
 import { useMediaFiles } from "../../../shared/hook/useMediaFiles";
 import { PersonalEditAvatar } from "../personal-edit-avatar/PersonalEditAvatar";
 import { PersonalInfoEditForm } from "../personal-info/PersonalInfoEditForm";
@@ -74,7 +74,6 @@ const UserEdit = () => {
     if (!validateFields()) return;
 
     const payload: EditUserInput = {
-      newImg: mediaPreview.fileList[0].result as string,
       id: user._id,
     };
 
@@ -87,8 +86,8 @@ const UserEdit = () => {
     }
 
     if (mediaPreview.fileList[0].file) {
-      payload.prevImg = user.avatar.public_id;
-      payload.newImg = mediaPreview.fileList[0].result as string;
+      payload.prevImg = user.avatar;
+      payload.newImg = mediaPreview.fileList[0].file;
     }
 
     editUser(payload);
@@ -97,8 +96,9 @@ const UserEdit = () => {
   };
 
   useLayoutEffect(() => {
-    if (user.avatar.url) {
-      mediaPreview.fillMedia([user.avatar.url]);
+    if (user.avatar) {
+      const hrefAvatar = `${CONFIG_APP.API_ENDPOINT}${user.avatar}?w=150&h=150&blur=0&rotate=0&linear=1,1&modulate=1,1&border=0,white`
+      mediaPreview.fillMedia([hrefAvatar]);
     }
   }, []);
 

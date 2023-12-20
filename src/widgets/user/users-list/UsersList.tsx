@@ -8,7 +8,7 @@ type Props = {
     _id: string;
     name: string;
     date_of_birth: string;
-    avatar: { public_id: string; url: string };
+    avatar: string;
   }[];
 };
 
@@ -39,7 +39,7 @@ const UsersList = ({ users }: Props) => {
                 <UserTableItem 
                 age={getAge(new Date(user.date_of_birth))} 
                 name={user.name} 
-                avatar={user.avatar.url} 
+                avatar={user.avatar} 
                 />
               </li>
             ))}

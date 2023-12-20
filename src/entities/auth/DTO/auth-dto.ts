@@ -5,9 +5,9 @@ export type RegistrationUserInput = {
   name: string;
   email: string;
   password: string;
-  avatar: string;
+  avatar: File;
   date_of_birth: string;
-  gender: string; 
+  gender: string;
 };
 
 export type RegistrationUserResponse = {
@@ -29,7 +29,7 @@ export type AuthorizationResponse = {
 export type EditUserInput = {
   name?: string,
   prevImg?: string,
-  newImg?: string,
+  newImg?: File,
   password?: string,
   id: string,
 };
@@ -38,7 +38,7 @@ export type AccountUser = {
   _id: string;
   name: string;
   date_of_birth: string;
-  avatar: { public_id: string; url: string };
+  avatar: string;
 }
 
 export type GetAllUsersResponse = {

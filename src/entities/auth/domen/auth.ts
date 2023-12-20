@@ -3,7 +3,7 @@ export interface UserModel {
   date_of_birth: string;
   email: string;
   gender: string;
-  avatar: { public_id: string; url: string };
+  avatar: string;
   name: string;
   token: string;
   updatedAt: string;
