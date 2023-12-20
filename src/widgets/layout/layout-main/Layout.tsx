@@ -14,11 +14,8 @@ const Layout = () => {
 
   const chackConnectServer = async() => {
     setIsConnectServer(true)
-    const response = await authAdapter.connect()
-    //@ts-ignore
-    if (response.success) {
-      setIsConnectServer(false)
-    }
+    await authAdapter.connect()
+    setIsConnectServer(false)
   }
 
 
