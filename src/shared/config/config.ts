@@ -1,6 +1,7 @@
 
 export const CONFIG_APP = {
-  API_ENDPOINT: 'http://localhost:4444/',
+  API_ENDPOINT: 'https://don-dew.onrender.com/',
+  // API_ENDPOINT: 'http://localhost:4445/',
   FETCH_CACHE_TIME: 15000,
   TOKEN: 'TOKEN',
   ACCESS_TOKEN_LOCALE_STORAGE: 'ACCESS_TOKEN',
