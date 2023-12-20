@@ -15,4 +15,7 @@ export const authAdapter: AuthService = {
    getAll(payload) {
     return AuthApi.getAll(payload)  
    },
+   connect() {
+    return AuthApi.connect()
+   },
 };

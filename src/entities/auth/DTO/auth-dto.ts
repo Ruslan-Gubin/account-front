@@ -1,6 +1,5 @@
 import { UserModel } from "../domen/auth";
 
-
 export type RegistrationUserInput = {
   name: string;
   email: string;
@@ -27,11 +26,11 @@ export type AuthorizationResponse = {
 };
 
 export type EditUserInput = {
-  name?: string,
-  prevImg?: string,
-  newImg?: File,
-  password?: string,
-  id: string,
+  name?: string;
+  prevImg?: string;
+  newImg?: File;
+  password?: string;
+  id: string;
 };
 
 export type AccountUser = {
@@ -39,12 +38,19 @@ export type AccountUser = {
   name: string;
   date_of_birth: string;
   avatar: string;
-}
+};
 
 export type GetAllUsersResponse = {
-status: string;
-data: {
-  users: AccountUser[];
-  text?: string;
-}
-}
+  status: string;
+  data: {
+    users: AccountUser[];
+    text?: string;
+  };
+};
+
+export type ConnectResponse =
+  | string
+  | {
+      success: boolean;
+      test: boolean;
+    };
